@@ -27,6 +27,7 @@ Template syntax is designed to be as straightforward as possible with 2 main use
 * keyword-based directives appear between `{%  %}`.  Keywords available are:
   * `{% for index,value of array %}`. Provides an index (or key in the case of an associative array) and a value for each item in the array given. Mark the end of the block with `{% endfor %}`.  When inside a looping block, use the `{{ moustache }}` syntax to display variables.
   * `{% if condition %}`, `{% else condition %}`, `{% else %}`, `{% endif %}` for simple conditional statements.  The condition must be parsable PHP.
+  * `{^ filename ^}` includes another file.  If this is a template file, it will be parsed and the result placed inline in this file.  The filename can be either absolute, or relative.
 
 
 > When displaying variables, associative arrays can be accessed using a "dot notation", e.g. `array.property`, or square-bracket notation (), e.g. `array['property']`.  These can be as deep as you like. For standard indexed arrays, use square-bracket notation, e.g. `array[1]`
